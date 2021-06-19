@@ -13,9 +13,13 @@ namespace EventHandlers
         //1- Define a delegate
         //2- Define an event based on that delegate 
         //3 -Raise an event
-        public delegate void VideoEncodedEventHandler(object source, VideoEventArgs args);
+        //public delegate void VideoEncodedEventHandler(object source, VideoEventArgs args);
+        //public event VideoEncodedEventHandler VideoEncoded;
 
-        public event VideoEncodedEventHandler VideoEncoded;
+        // EventHandler
+        // EventHandler<TEventArgs>
+        public event EventHandler<VideoEventArgs> VideoEncoded;
+
 
         public void Encode(Video video)
         {
